@@ -1,0 +1,102 @@
+{
+    "kategori": [
+        {
+            "category": "Shop by brand",
+            "image_folder": "category_list",
+            "image": "cat_shopnow.jpg",
+            "name": "shop by brand"
+        },
+        {
+            "category": "Amplifiers",
+            "image_folder": "category_list",
+            "image": "cat_amplifyer.jpg",
+            "name": "amplifiers"
+        },
+        {
+            "category": "Speakers",
+            "image_folder": "category_list",
+            "image": "cat_speakers.jpg",
+            "name": "speakers"
+        },
+        {
+            "category": "Turntables",
+            "image_folder": "category_list",
+            "image": "cat_turntables.jpg",
+            "name": "turntables"
+        },
+        {
+            "category": "CD players",
+            "image_folder": "category_list",
+            "image": "cat_cd_players.jpg",
+            "name": "cd players"
+        },
+        {
+            "category": "Streamers",
+            "image_folder": "category_list",
+            "image": "cat_streamers.jpg",
+            "name": "streamers"
+        },
+        {
+            "category": "Cables",
+            "image_folder": "category_list",
+            "image": "cat_cables.jpg",
+            "name": "cables"
+        },
+        {
+            "category": "Furniture",
+            "image_folder": "category_list",
+            "image": "cat_furniture.jpg",
+            "name": "furniture"
+        },
+        {
+            "category": "Headphones",
+            "image_folder": "category_list",
+            "image": "cat_headphones.jpg",
+            "name": "headphones"
+        },
+        {
+            "category": "Home cinema",
+            "image_folder": "category_list",
+            "image": "cat_home_cinema.jpg",
+            "name": "home cinema"
+        },
+        {
+            "category": "Outlets",
+            "image_folder": "category_list",
+            "image": "cat_outlet.jpg",
+            "name": "outlet - save up to 50% off"
+        },
+        {
+            "category": "Ebay shop",
+            "image_folder": "category_list",
+            "image": "cat_ebay.jpg",
+            "name": "ebay shop"
+        },
+        {
+            "category": "Ceiling speakers",
+            "image_folder": "category_list",
+            "image": "cat_ceiling_speakers.jpg",
+            "name": "ceiling speakers"
+        },
+        {
+            "category": "TV's",
+            "image_folder": "category_list",
+            "image": "cat_tvs.jpg",
+            "name": "tvs"
+        },
+        {
+            "category": "Vinyls",
+            "image_folder": "category_list",
+            "image": "cat_vinyl.jpg",
+            "name": "vinyls  lps"
+        },
+        {
+            "category": "Shop now",
+            "image_folder": "category_list",
+            "image": "cat_shopnow.jpg",
+            "name": "shop now"
+        }
+    ]
+
+    
+}

@@ -1,0 +1,27 @@
+@import "./base.css"; /* Base med resets*/
+@import "./layout.css";
+@import "./modules/hero.css"; /* Hero image*/
+@import "./modules/header.css"; /* Header modul med navigation */
+@import "./modules/footer.css"; /* Footer modul */
+@import "./modules/navigation.css"; /* Navigation i header */
+@import "./modules/header_icons.css"; /* Icons i header */
+@import "./modules/banner.css"; /* Banner */
+@import "./modules/image_slider.css"; /* Image slider */
+@import "./modules/social_cards.css"; /* Social media cards */
+@import "./modules/info_cards.css"; /* Info cards m. link knap */
+@import "./modules/kategoriliste.css"; /*Kategori liste til sortimentet */
+@import "./modules/breadcrumbs.css"; /* Breadcrumbs */
+@import "./modules/shop_kategorier.css"; /* Shop kategori-page med asides */
+@import "./modules/nested_shop_categories.css"; /* nested grid i main-grid */
+@import "./modules/product-category-thumb.css"; /*produktvindue er hardcoded/fastsat i størrelse */
+@import "./modules/sortingbar.css"; /* Sorterings-bar til shop_kategorier */
+@import "./modules/asides_categories.css"; /* Asides på main-grid */
+@import "./modules/brands.css"; /* brands side */
+@import "./modules/product.css"; /* Product side */
+@import "./modules/product-preview.css"; /* Product previwe gallery */
+@import "./modules/product-description.css"; /* Product description */
+@import "./modules/buttons.css"; /* Button blocks og modifiers */
+@import "./modules/product-form.css"; /* "Add to cart" form til product */
+@import "./modules/product-tables.css"; /* Tables til product siden */
+@import "./modules/product-call.css"; /* call button */
+@import "./modules/searchbar.css" /* searchbar i header */

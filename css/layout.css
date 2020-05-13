@@ -1,0 +1,13 @@
+.body__color{
+    background-color: var(--black);
+}
+
+.shop__kategorierStyle {
+    display: grid;
+    grid-template-columns: (5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;    
+    max-width: 1300px;
+    background-color: var(--white);
+    margin: 0 auto;
+}

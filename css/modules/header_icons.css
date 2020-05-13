@@ -1,0 +1,14 @@
+.icon-list{
+    display: flex;
+    justify-content: flex-end;
+    color: var(--white)
+}
+
+.icon-list__icon{
+    padding: 20px;
+}
+
+.icon-list__icon_link{
+    color: var(--white);
+}
+
