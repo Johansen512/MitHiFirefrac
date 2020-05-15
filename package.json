@@ -1,0 +1,27 @@
+{
+  "name": "MitHiFirefracThis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johansen512/MitHiFirefrac.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Johansen512/MitHiFirefrac/issues"
+  },
+  "homepage": "https://github.com/Johansen512/MitHiFirefrac#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-ejs": "^5.1.0",
+    "gulp-rename": "^2.0.0"
+  }
+}

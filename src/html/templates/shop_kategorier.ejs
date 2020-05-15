@@ -1,0 +1,177 @@
+<%- include ("../partials/before-header.ejs")  %>
+<!--Her mangler class="body__color" på body-->
+<%- include("../partials/header.ejs") %>
+
+<div class="shop__kategorierStyle">
+
+    <!--SHOP CATEGORIES LIST ASIDE1 START ********************************************************************************-->
+
+
+    <div class="shopkategorier__aside_left">
+            <p class="breadcrumbs"></p>
+
+            <ul class="shopkategorier__aside_left-1">
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=Amplifiers">Amplifiers</a></li>
+
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=Speakers">Speakers</a></li>
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=Turntables">Turntables</a></li>
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=CD players">CD Players</a></li>
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=Streamers">Streamers</a></li>
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=Cables">Cables</a></li>
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=Furniture">Furniture</a></li>
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=Headphones">Headphones</a></li>
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=Home cinema">Home Cinema</a></li>
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=Ceiling speakers">Ceiling
+                                    Speakers</a></li>
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=TV's">TV</a></li>
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=Vinyl"></a></li>
+                    <li class="shopkategorier__links"><a class="shopkategorier__links_url"
+                                    href="shop_kategorier.html?category=Shop now">Outlet - Save ££££</a>
+                    </li>
+
+            </ul>
+
+
+            <ul class="shopkategorier__aside_left-2">
+
+                    <h3 class="shopoverskriftside">SHOP BY</h3>
+                    <h3 class="shopoverskriftside__sub">Filter</h3>
+                    <h3 class="shopoverskriftside__sub">PRICE</h3>
+
+                    <li class="shopkategorier__links_sorter"><a class="shopkategorier__links_sorterurl"
+                                    href="#">£0.00 -
+                                    £799.99
+                                    &#40;10&#41;</a></li>
+                    <li class="shopkategorier__links_sorter"><a class="shopkategorier__links_sorterurl"
+                                    href="#">£800 -
+                                    £999.99
+                                    &#40;11&#41;</a></li>
+                    <li class="shopkategorier__links_sorter"><a class="shopkategorier__links_sorterurl"
+                                    href="#">£1,000 -
+                                    £1,499.99 &#40;13&#41;</a></li>
+                    <li class="shopkategorier__links_sorter"><a class="shopkategorier__links_sorterurl"
+                                    href="#">£1,500 -
+                                    £1,999.99 &#40;13&#41;</a></li>
+                    <li class="shopkategorier__links_sorter"><a class="shopkategorier__links_sorterurl"
+                                    href="#">£2,000 -
+                                    £2,999.99 &#40;20&#41;</a></li>
+                    <li class="shopkategorier__links_sorter"><a class="shopkategorier__links_sorterurl"
+                                    href="#">£3,000 -
+                                    £3,499.99 &#40;11&#41;</a></li>
+                    <li class="shopkategorier__links_sorter"><a class="shopkategorier__links_sorterurl"
+                                    href="#">£3,500 -
+                                    £4,999.99 &#40;17&#41;</a></li>
+                    <li class="shopkategorier__links_sorter"><a class="shopkategorier__links_sorterurl"
+                                    href="#">£5,000 -
+                                    £7,999.99 &#40;16&#41;</a></li>
+                    <li class="shopkategorier__links_sorter"><a class="shopkategorier__links_sorterurl"
+                                    href="#">£8,000 -
+                                    £11,999.99 &#40;9&#41;</a></li>
+                    <li class="shopkategorier__links_sorter"><a class="shopkategorier__links_sorterurl"
+                                    href="#">£12,000 and
+                                    above &#40;13&#41;</a></li>
+
+                    <h3 class="shopoverskriftside__sub">MANUFACTERER</h3>
+            </ul>
+    </div>
+
+    <!--SHOP CATEGORIES LIST END ****************************************************************************************-->
+
+    <!--SHOP CATEGORIES SORTING BAR TOP START ***************************************************************************-->
+
+
+    <div class="shop__kategorier_sorterBarTop">
+
+            <h2 class="currentpage-titel"></h2>
+
+            <form class="shop__kategorier_sorterAntal" action="/action_page.php">
+                    <label for="">SORT BY:</label>
+                    <select id="kriterier" name="kriterier">
+                            <option value="price">Price</option>
+                            <option value="popular">Popular</option>
+                            <option value="latest">Latest</option>
+                            <option value="oldest">Oldest</option>
+                    </select>
+                    <p class="view-as-icon">VIEW AS</p>
+                    <i class="fab fa-microsoft"></i>
+                    <i class="fas fa-bars"></i>
+
+                    <label for="">SHOW:</label>
+                    <select id="antal" name="antal">
+                            <option value="300">300</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                            <option value="All">All</option>
+                    </select>
+            </form>
+    </div>
+
+    <!--SHOP CATEGORIES SORTING BAR TOP END ******************************************************************************-->
+
+    <!--SHOP CATEGORIES START ********************************************************************************************-->
+    <div class="shop__kategorier_nest">
+
+    </div>
+
+    <!--SHOP CATEGORIES SLUT ********************************************************************************************-->
+
+    <!--SHOP CATEGORIES LIST ASIDE2 START *******************************************************************************-->
+
+    <div class="manufacturer__aside_right">
+            <h3 class="manufacturer__aside_right-title">MANUFACTURER</h3>
+    </div>
+
+    <!--SHOP CATEGORIES LIST ASIDE2 SLUT ******************************************************************************-->
+
+    <!--SHOP CATEGORIES SORTING BAR BUND START ************************************************************************-->
+
+
+    <!--SHOP CATEGORIES SORT BAR BUND SLUT ****************************************************************************-->
+
+</div>
+
+<div class="shop__kategorier_sorter-bottom">
+
+    <form class="shop__kategorier_sorterAntal" action="/action_page.php">
+            <label for="">SORT BY:</label>
+            <select id="kriterier" name="kriterier">
+                    <option value="price">Price</option>
+                    <option value="popular">Popular</option>
+                    <option value="latest">Latest</option>
+                    <option value="oldest">Oldest</option>
+            </select>
+            <p class="view-as-icon">VIEW AS</p>
+            <i class="fab fa-microsoft"></i>
+            <i class="fas fa-bars"></i>
+
+            <label for="">SHOW:</label>
+            <select id="antal" name="antal">
+                    <option value="300">300</option>
+                    <option value="400">400</option>
+                    <option value="500">500</option>
+                    <option value="All">All</option>
+            </select>
+    </form>
+</div>
+
+<%- include ("../partials/footer.ejs") %>
+
+        <script src="js/fetch_shop_category.js"></script>
+        <script src="js/fetch_shop_brand.js"></script>
+        <script src="js/fetch_manufactur.js"></script>
+        <script src="js/fetch_manufactur_left.js"></script>
+        <script src="js/fetch_search.js"></script>
+        
+<%- include ("../partials/after-footer.ejs") %>

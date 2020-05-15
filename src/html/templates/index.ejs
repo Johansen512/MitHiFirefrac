@@ -1,0 +1,62 @@
+<%- include ("../partials/before-header.ejs")  %>
+
+
+<section class="hero">
+    <%- include("../partials/header.ejs") %>
+
+<div class="hero__logo">
+    <img src="images/logos/logo_big.png" alt="logo">
+</div>
+</section> <!--her slutter den tredje puniske krig OG HEROSEKTIONEN-->
+
+<section class="banner">
+</section>
+
+<section class="image-slider">
+<div class="image-slider__container">
+    <a class="prev" id="prev"><i class="fas fa-chevron-left image-slider__arrow-icon"></i></a>
+    <a class="next" id="next"><i class="fas fa-chevron-right image-slider__arrow-icon"></i></a>
+    <section class="image-slider__container_image"></section>
+</div>
+</section>
+
+<section class="social-cards">
+<div class="social-cards__box_1"><a href="https://www.facebook.com" target="_blank"><i
+            class="fab fa-facebook social-cards__icon"></i></a></div>
+<div class="social-cards__box_2"><a href="https://www.blogger.com" target="_blank"><i
+            class="fab fa-blogger social-cards__icon"></i></a></div>
+<div class="social-cards__box_3"><a href="https://www.twitter.com" target="_blank"><i
+            class="fab fa-twitter social-cards__icon"></i></a></div>
+</section>
+
+<section class="info-cards">
+<div class="info-cards__box_1">
+    <div class="info-cards__button"><a class="info-cards__link" href="#">History</a></div>
+    <div class="info-cards__text">
+        <p class="p">Established in the late 1960s, our family owned business is based in the edinburgh and
+            falkirk,
+            servicing custmers across the uk.</p>
+    </div>
+</div>
+<div class="info-cards__box_2">
+    <div class="info-cards__button"><a class="info-cards__link" href="#">News</a></div>
+    <div class="info-cards__text">
+        <p class="p">Check out our latest news stories for all the up to date hi-fi corner products and
+            launches.
+        </p>
+    </div>
+</div>
+<div class="info-cards__box_3">
+    <div class="info-cards__button"><a class="info-cards__link" href="kategoriliste.html">Shop</a></div>
+    <div class="info-cards__text">
+        <p class="p">Have a look in our online shop for great produts and deals.</p>
+    </div>
+</div>
+
+</section>
+
+<%- include ("../partials/footer.ejs") %>
+
+<script src="js/fetch_banner.js"></script>
+    <script src="js/fetch_image_slider.js"></script>
+<%- include ("../partials/after-footer.ejs") %>
