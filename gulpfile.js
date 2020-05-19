@@ -1,48 +1,21 @@
-const gulp = require ('gulp');
-const ejs = require ('gulp-ejs');
-const rename = require ('gulp-rename');
 const connect = require ('gulp-connect');
+const { watchHTML} = require ('./tasks/html');
+const { watchSCSS} = require ('./tasks/scss');
 
 
-function html (){
-return gulp
-.src ("./src/html/templates/*.ejs")
-.pipe (ejs())
-.pipe (rename(function (path){
-    if (path.basename != "index"){
-path.dirname = path.basename;
-path.basename = "index";
-path.extname = ".html";
-
-    } else{
-        path.extname =".html"
-    }
 
 
-    
 
-}))
-
-.pipe (gulp.dest ("./tmp"))
-.pipe (connect.reload());
- 
-}
-
-
-function watchHTML () {
-    return gulp
-    .watch("./src/html/**/*.ejs", {
-        ignoreInitial: false
-    }, html);
-} 
-
-
-gulp.task ("dev", function(done){
+function dev(done){
 
 watchHTML();
+watchSCSS();
 connect.server ({
     livereload: true,
+    port: 3000,
     root: "tmp"
 })
-    done();
-})
+  done();
+}
+
+exports.default = dev;
