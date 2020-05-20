@@ -19,9 +19,13 @@
   },
   "homepage": "https://github.com/Johansen512/MitHiFirefrac#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-connect": "^5.7.0",
     "gulp-ejs": "^5.1.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
