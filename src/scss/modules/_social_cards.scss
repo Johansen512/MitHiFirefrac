@@ -9,7 +9,7 @@
         
 .social-cards__box_1 { 
     grid-area: 1 / 1 / 2 / 2; 
-    background-image: url(../../images/social_card_1.jpg);
+    background-image: url(/assets/img/social_card_1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -18,7 +18,7 @@
 }
 .social-cards__box_2 { 
     grid-area: 1 / 2 / 2 / 3; 
-    background-image: url(../../images/social_card_2.jpg);
+    background-image: url(/assets/img/social_card_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -28,7 +28,7 @@
 
 .social-cards__box_3 { 
     grid-area: 1 / 3 / 2 / 4; 
-    background-image: url(../../images/social_card_3.jpg);
+    background-image: url(/assets/img/social_card_3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

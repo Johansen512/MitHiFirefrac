@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
             let h4 = document.createElement("h4");
 
             h4.className = "product-breadcrumbs"
-            h4.innerHTML = `<a href="kategoriliste.html" class="breadcrumbs__home_active">Home</a> / 
-                            <a href="shop_kategorier.html?category=${current_data.category}" class="breadcrumbs__home_active">${current_data.category}</a> 
+            h4.innerHTML = `<a href="/kategoriliste" class="breadcrumbs__home_active">Home</a> / 
+                            <a href="/shop_kategorier?category=${current_data.category}" class="breadcrumbs__home_active">${current_data.category}</a> 
                             / ${current_data.name}`;
 
             product_box.appendChild(h4);
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <input class="product-variant__input" type="radio" name="variant" value="${finish.text}">
                     <label class="product-varaint__label" for="black">${finish.text}</label>
                 `;
-
+//VARAINT? REALLY?
                 product_variant.appendChild(variant_box);
 
             });

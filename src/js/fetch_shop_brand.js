@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function (){
         current_data = data.products.filter(product => product.brand == params_brand);
 
         if (params_brand) {
-            breadcrumbs_text.innerHTML = `<span class="breadcrumbs__home"><a href="kategoriliste.html" class="breadcrumbs__home_active">Home</a></span> / ${params_brand}</a></span>`;
+            breadcrumbs_text.innerHTML = `<span class="breadcrumbs__home"><a href="/kategoriliste" class="breadcrumbs__home_active">Home</a></span> / ${params_brand}</a></span>`;
             currentPageTitle.innerHTML = `${params_brand}`;
         }
 
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function (){
                 <p class="product__pricesale">${product.price}</p>
                 <p class="product__price">${product.sale}</p>
             </div>
-                <a class="putinbasket button_brown-button" href="product.html?id=${product.id}">ADD TO CART</a>
+                <a class="putinbasket button_brown-button" href="/product?id=${product.id}">ADD TO CART</a>
             `;
 
             shop_box.appendChild(shop_varer);

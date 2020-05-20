@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let sectionLeft = document.createElement('ul');
                 sectionLeft.setAttribute('data-brand', products.brand);
                 sectionLeft.innerHTML = `  
-                <li class="shopkategorier__links_manufacturer"><a class="shopkategorier__links_sorterurl" href="shop_kategorier.html?brand=${products.brand}">${products.brand}</a></li>
+                <li class="shopkategorier__links_manufacturer"><a class="shopkategorier__links_sorterurl" href="/shop_kategorier?brand=${products.brand}">${products.brand}</a></li>
                 `;
 
                 manuAsideLeft.appendChild(sectionLeft);

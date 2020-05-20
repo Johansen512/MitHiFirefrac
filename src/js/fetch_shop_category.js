@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function (){
         }
 
         if (params_category) {
-            breadcrumbs_text.innerHTML = `<span class="breadcrumbs__home"><a href="kategoriliste.html" class="breadcrumbs__home_active">Home</a></span> / ${params_category}</a></span>`;
+            breadcrumbs_text.innerHTML = `<span class="breadcrumbs__home"><a href="/kategoriliste" class="breadcrumbs__home_active">Home</a></span> / ${params_category}</a></span>`;
             currentPageTitle.innerHTML = `${params_category}`;
         }
 
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function (){
                 <p class="product__pricesale">${product.price}</p>
                 <p class="product__price">${product.sale}</p>
             </div>
-                <a class="putinbasket button_brown-button" href="product.html?id=${product.id}">ADD TO CART</a>
+                <a class="putinbasket button_brown-button" href="/product?id=${product.id}">ADD TO CART</a>
             `;
 
             shop_box.appendChild(shop_varer);
