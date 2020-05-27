@@ -4,7 +4,14 @@ document.addEventListener("DOMContentLoaded", function (){
     let search_params = new URLSearchParams(current_URL);
     let params_search = search_params.get("searchbar");
 
-    fetch("/assets/data/product_data_dummy.json")
+    fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
+        "method": "GET"
+      })
+     
+
+
+    /*fetch("/assets/data/product_data_dummy.json")*/
+
     .then(response => response.json())
     .then(data => {
 
@@ -30,14 +37,14 @@ document.addEventListener("DOMContentLoaded", function (){
 
             let shop_varer = document.createElement("div");
             shop_varer.className = "shopkategorier__varer";
-            shop_varer.setAttribute(`data-id`, product.id);
+            shop_varer.setAttribute(`data-id`, products.sku);
 
             shop_varer.innerHTML = `
             <div class="shop__kategorier_box">
-                <img class="shop__kategorier_varebillede" src="/assets/img/produktbilleder/${product.image_folder}/${product.image}" alt="varebillede">
+                <img class="shop__kategorier_varebillede" src="/assets/img/produktbilleder/${products.image_folder}/${products.image}" alt="varebillede">
             </div>
-                <p class="product__text">${product.name}</p>
-                <a class="putinbasket button_brown-button" href="/product?id=${product.id}">ADD TO CART</a>
+                <p class="product__text">${products.make}/${products.model}</p>
+                <a class="putinbasket button_brown-button" href="/product?sku=${products.sku}">ADD TO CART</a>
             `;
 
             shop_box.appendChild(shop_varer);

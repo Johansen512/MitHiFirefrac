@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 let section = document.createElement('section');
                 section.className = "mySlides";
-                section.setAttribute('data-id', products.id);
+                section.setAttribute('data-id', products.sku);
                 section.innerHTML = ` 
                 <div class="image-slider__container">
                         <div class="image-slider__text">
                         ${products.name}
                     </div>
                         <div class="fade">
-                        <a href="/shop_kategorier?id=${products.name}">
+                        <a href="/shop_kategorier?sku=${products.name}">
                         <img src="/assets/img/produktbilleder/${products.image_folder}/${products.image}" class="pics" alt="${products.name}" /></a>
                         </div>
                 </div>
