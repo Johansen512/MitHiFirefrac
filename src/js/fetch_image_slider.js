@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("/assets/data/product_data_dummy.json")
+    fetch("https://hifi-corner.herokuapp.com/api/v1/products")
         .then(response => response.json())
         .then(data => {
 
@@ -8,15 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 let section = document.createElement('section');
                 section.className = "mySlides";
-                section.setAttribute('data-id', products.id);
+                section.setAttribute('data-id', products.sku);
                 section.innerHTML = ` 
                 <div class="image-slider__container">
                         <div class="image-slider__text">
-                        ${products.name}
+                        ${data.make}/${data.model}
                     </div>
                         <div class="fade">
-                        <a href="/shop_kategorier?id=${products.name}">
-                        <img src="/assets/img/produktbilleder/${products.image_folder}/${products.image}" class="pics" alt="${products.name}" /></a>
+                        <a href="/shop_kategorier?sku=${data.make}/${data.model}">
+                        <img src="${products.images}" class="pics" alt="${data.make}/${data.model}" /></a>
                         </div>
                 </div>
             `;

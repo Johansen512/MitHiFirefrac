@@ -4,7 +4,11 @@ document.addEventListener("DOMContentLoaded", function (){
     let search_params = new URLSearchParams(current_URL);
     let params_brand = search_params.get("brand");
 
-    fetch("/assets/data/product_data_dummy.json")
+    /*fetch("/assets/data/product_data_dummy.json")*/
+
+    fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
+        "method": "GET"
+      })
     .then(response => response.json())
     .then(data => {
 
@@ -13,30 +17,31 @@ document.addEventListener("DOMContentLoaded", function (){
         let currentPageTitle = document.querySelector(".currentpage-titel")
         let current_data;
 
-        current_data = data.products.filter(product => product.brand == params_brand);
+        current_data = data.filter(products => products.name == params_brand);
 
         if (params_brand) {
             breadcrumbs_text.innerHTML = `<span class="breadcrumbs__home"><a href="/kategoriliste" class="breadcrumbs__home_active">Home</a></span> / ${params_brand}</a></span>`;
             currentPageTitle.innerHTML = `${params_brand}`;
         }
 
-        current_data.forEach(product => {
+        current_data.forEach(products => {
 
             let shop_varer = document.createElement("div");
             shop_varer.className = "shopkategorier__varer";
-            shop_varer.setAttribute(`data-id`, product.id);
+            shop_varer.setAttribute(`data-id`, products.sku);
 
             shop_varer.innerHTML = `
             <div class="shop__kategorier_box">
-                <img class="shop__kategorier_varebillede" src="/assets/img/produktbilleder/${product.image_folder}/${product.image}" alt="varebillede">
+                <img class="shop__kategorier_varebillede" src="${products.image}" alt="varebillede">
             </div>
-                <p class="product__text">${product.name}</p>
+                <p class="product__text">${products.make}/${products.model}</p>
                 <div class="price-boxes">
-                <p class="product__pricesale">${product.price}</p>
-                <p class="product__price">${product.sale}</p>
+                
+                <p class="product__price">${products.price}</p>
             </div>
-                <a class="putinbasket button_brown-button" href="/product?id=${product.id}">ADD TO CART</a>
+                <a class="putinbasket button_brown-button" href="/product?sku=${products.sku}">ADD TO CART</a>
             `;
+/*<p class="product__pricesale">${products.price}</p> Hører til oppe ved price*/
 
             shop_box.appendChild(shop_varer);
         });

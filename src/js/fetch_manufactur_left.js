@@ -2,13 +2,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let manufacturers = [];
 
-    fetch("/assets/data/product_data_dummy.json")
+    /*fetch("/assets/data/product_data_dummy.json")*/
+
+    fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
+  "method": "GET"
+})
         .then(response => response.json())
         .then(data => {
 
             let manuAsideLeft = document.querySelector('.shopkategorier__aside_left-2');
 
-            data.products.forEach(products => {
+            data.forEach(products => {
                 if (manufacturers.indexOf(products.brand) != -1) { return; }
                 manufacturers.push(products.brand);
                 

@@ -2,13 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let current_URL = window.location.search;
     let search_params = new URLSearchParams(current_URL);
-    let params_id = parseInt(search_params.get("id"));
+    let params_id = search_params.get ("sku");
+/*console.log (params_id);*/
+    /*fetch("/assets/data/product_data_dummy.json")*/
 
-    fetch("/assets/data/product_data_dummy.json")
+    fetch(`https://hifi-corner.herokuapp.com/api/v1/products/${params_id}`, {
+  "method": "GET"
+})
         .then(response => response.json())
         .then(data => {
-
-            let current_data = data.products.find(product => product.id == params_id);
+/*console.log (data);*/
+            
             let product_box = document.querySelector(".product-box");
             let product_preview = document.createElement("article");
             let product_description = document.createElement("article");
@@ -20,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             h4.className = "product-breadcrumbs"
             h4.innerHTML = `<a href="/kategoriliste" class="breadcrumbs__home_active">Home</a> / 
-                            <a href="/shop_kategorier?category=${current_data.category}" class="breadcrumbs__home_active">${current_data.category}</a> 
-                            / ${current_data.name}`;
+                            <a href="/shop_kategorier?category=${data.category}" class="breadcrumbs__home_active">${data.category}</a> 
+                            / ${data.make}/${data.model}`;
 
             product_box.appendChild(h4);
 
@@ -30,14 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="preview-box">
                 
                     <div class="preview__image-box">
-                        <img class="image-box__image" src="/assets/img/produktbilleder/${current_data.image_folder}/${current_data.image}">
+                        <img class="image-box__image" src="${data.images}">
                     </div>
 
                     <h2 class="heading__preview-text">more views</h2>
 
                     <ul class="thumb-list preview-box__thumb-list">
-                        <li class="thumb"><img class="thumb__image" src="/assets/img/produktbilleder/${current_data.image_folder}/${current_data.image}"></li>
-                        <li class="thumb"><img class="thumb__image" src="/assets/img/category_list/cat_amplifyer.jpg"></li>
+                        <li class="thumb"><img class="thumb__image" src="${data.images}"></li>
+                        <li class="thumb"><img class="thumb__image" src="/assets/img/category_list/amplifyer.jpg"></li>
                         <li class="thumb"><img class="thumb__image" src="/assets/img/category_list/cat_cd_players.jpg"></li>
                         <li class="thumb"><img class="thumb__image" src="/assets/img/category_list/cat_vinyl.jpg"></li>
                     </ul>
@@ -48,13 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product_description.className = "product-description";
             product_description.innerHTML = `
-                <h2 class="heading__product-name">${current_data.name}</h2>
-                <h4 class="link link__brand-link">See other ${current_data.brand} products</h4>
+                <h2 class="heading__product-name">${data.make}/${data.model}</h2>
+                <h4 class="link link__brand-link">See other ${data.make} products</h4>
                 <div class="price-box">
-                <h3 class="heading__product-price">${current_data.price}</h3>
-                <h2 class="heading__product-sale">${current_data.sale}</h2>               
+                <h3 class="heading__product-price">${data.price}</h3>
+                              
                 </div>
-                <p class="text__product-description">${current_data.description}</p>
+                <p class="text__product-description">${data.description}</p>
 
                 <ul class="button-list product__button-list">
                     <li class="button-list__item"><a class="button button_brown-button">ask a question</a></li>
@@ -95,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product_box.appendChild(product_cart);
 
-            current_data.arrays.finish.forEach(finish => {
+            data.arrays.finish.forEach(finish => {
                 let product_variant = document.querySelector(".fetch-variant")
                 let variant_box = document.createElement("div");
 
@@ -118,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product_box.appendChild(product_info);
 
-            current_data.arrays.info.forEach(info => {
+            data.arrays.info.forEach(info => {
                 let info_table = document.querySelector(".product-info__info-table");
                 let table_row = document.createElement("tr");
 
@@ -140,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product_box.appendChild(product_details);
 
-            current_data.arrays.detail.forEach(detail => {
+            data.arrays.detail.forEach(detail => {
                 let detail_table = document.querySelector(".product-detail__detail-table");
                 let table_row = document.createElement("tr");
 

@@ -9,6 +9,14 @@ function data () {
     
     }
 
+    function buildDATA() {
+        return gulp
+                .src('./src/data/**/*')
+                .pipe(gulp.dest("tmp/assets/data"))
+                
+        
+        }
+
 
     function watchDATA (){
         return gulp
@@ -18,6 +26,7 @@ function data () {
     }
     
     module.exports = {
-        watchDATA
+        watchDATA,
+        buildDATA
        
     }
