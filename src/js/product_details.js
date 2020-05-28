@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let current_URL = window.location.search;
     let search_params = new URLSearchParams(current_URL);
     let params_id = search_params.get ("sku");
-console.log (params_id);
+/*console.log (params_id);*/
     /*fetch("/assets/data/product_data_dummy.json")*/
 
     fetch(`https://hifi-corner.herokuapp.com/api/v1/products/${params_id}`, {
@@ -11,7 +11,7 @@ console.log (params_id);
 })
         .then(response => response.json())
         .then(data => {
-console.log (data);
+/*console.log (data);*/
             
             let product_box = document.querySelector(".product-box");
             let product_preview = document.createElement("article");
@@ -34,14 +34,14 @@ console.log (data);
                 <div class="preview-box">
                 
                     <div class="preview__image-box">
-                        <img class="image-box__image" src="/${data.images}">
+                        <img class="image-box__image" src="${data.images}">
                     </div>
 
                     <h2 class="heading__preview-text">more views</h2>
 
                     <ul class="thumb-list preview-box__thumb-list">
-                        <li class="thumb"><img class="thumb__image" src="/${data.images}"></li>
-                        <li class="thumb"><img class="thumb__image" src="/assets/img/category_list/cat_amplifyer.jpg"></li>
+                        <li class="thumb"><img class="thumb__image" src="${data.images}"></li>
+                        <li class="thumb"><img class="thumb__image" src="/assets/img/category_list/amplifyer.jpg"></li>
                         <li class="thumb"><img class="thumb__image" src="/assets/img/category_list/cat_cd_players.jpg"></li>
                         <li class="thumb"><img class="thumb__image" src="/assets/img/category_list/cat_vinyl.jpg"></li>
                     </ul>

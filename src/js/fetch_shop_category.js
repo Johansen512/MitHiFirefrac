@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", function (){
     let current_URL = window.location.search;
     let search_params = new URLSearchParams(current_URL);
     let params_category = search_params.get("category");
-
- /*fetch("/assets/data/product_data_dummy.json")*/
-    fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
+    console.log(params_category);
+ 
+    /*fetch(`https://hifi-corner.herokuapp.com/api/v1/products/${params_category}`*/
+    fetch("https://hifi-corner.herokuapp.com/api/v1/products?category=", {
   "method": "GET"
 })
 
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function (){
       
     .then(response => response.json())
     .then(data => {
-
+console.log (data)
         let shop_box = document.querySelector(".shop__kategorier_nest");
         let breadcrumbs_text = document.querySelector(".breadcrumbs");
         let currentPageTitle = document.querySelector(".currentpage-titel")

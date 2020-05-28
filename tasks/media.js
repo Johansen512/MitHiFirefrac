@@ -9,6 +9,14 @@ function media () {
     
     }
 
+    function buildMEDIA () {
+        return gulp
+                .src('./src/media/**/*')
+                .pipe(gulp.dest("dist/assets/media"));
+                
+        
+        }
+
 
     function watchMEDIA (){
         return gulp
@@ -18,6 +26,7 @@ function media () {
     }
     
     module.exports = {
-        watchMEDIA
+        watchMEDIA,
+        buildMEDIA
        
     }

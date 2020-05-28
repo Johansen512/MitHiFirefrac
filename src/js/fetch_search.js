@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function (){
         let shop_box = document.querySelector(".shop__kategorier_nest");
         let breadcrumbs_text = document.querySelector(".breadcrumbs");
         let currentPageTitle = document.querySelector(".currentpage-titel");
-        let current_data = filterSearch(data.products, params_search);
+        let current_data = filterSearch(data, params_search);
 
         function filterSearch(arr, search) {
             return arr.filter(function(el) {

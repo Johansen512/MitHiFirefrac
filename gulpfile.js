@@ -1,10 +1,10 @@
 const connect = require ('gulp-connect');
-const { watchHTML} = require ('./tasks/html');
-const { watchSCSS} = require ('./tasks/scss');
-const { watchJS} = require ('./tasks/js');
-const { watchIMG } = require ('./tasks/img');
-const { watchMEDIA } = require ('./tasks/media');
-const { watchDATA } = require ('./tasks/data');
+const { watchHTML, buildHTML} = require ('./tasks/html');
+const { watchSCSS, buildSCSS} = require ('./tasks/scss');
+const { watchJS, buildJS} = require ('./tasks/js');
+const { watchIMG, buildIMG } = require ('./tasks/img');
+const { watchMEDIA, buildMEDIA } = require ('./tasks/media');
+const { watchDATA, buildDATA } = require ('./tasks/data');
 
 
 
@@ -26,4 +26,17 @@ connect.server ({
   done();
 }
 
+function build (done) {
+
+  buildHTML();
+  buildSCSS();
+  buildJS ();
+  buildIMG ();
+  buildMEDIA();
+  buildDATA();
+  done();
+
+}
+
 exports.default = dev;
+exports.build = build;
