@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product_box.appendChild(product_cart);
 
-            data.arrays.finish.forEach(finish => {
+            /*data.arrays.finish.forEach(finish => {
                 let product_variant = document.querySelector(".fetch-variant")
                 let variant_box = document.createElement("div");
 
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //VARAINT? REALLY?
                 product_variant.appendChild(variant_box);
 
-            });
+            });*/
 
             product_info.className = "product-info";
             product_info.innerHTML = `

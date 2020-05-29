@@ -4,19 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
 
             let sliderSection = document.querySelector('.image-slider__container_image');
-            data.products.forEach(products => {
-
+            data.forEach(products => {
+                
                 let section = document.createElement('section');
                 section.className = "mySlides";
                 section.setAttribute('data-id', products.sku);
                 section.innerHTML = ` 
                 <div class="image-slider__container">
                         <div class="image-slider__text">
-                        ${data.make}/${data.model}
+                        ${products.make}/${products.model}
                     </div>
                         <div class="fade">
-                        <a href="/shop_kategorier?sku=${data.make}/${data.model}">
-                        <img src="${products.images}" class="pics" alt="${data.make}/${data.model}" /></a>
+                        <a href="/product/?sku=${products.sku}">
+                        <img src="${products.images}" class="pics" alt="${products.make}/${products.model}" /></a>
                         </div>
                 </div>
             `;
