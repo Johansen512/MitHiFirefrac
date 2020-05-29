@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
     let current_URL = window.location.search;
     let search_params = new URLSearchParams(current_URL);
-    let params_brand = search_params.get("brand");
+    let params_brand = search_params.get("make");
 
     /*fetch("/assets/data/product_data_dummy.json")*/
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function (){
         let currentPageTitle = document.querySelector(".currentpage-titel")
         let current_data;
 
-        current_data = data.filter(products => products.name == params_brand);
+        current_data = data.filter(products => products.make == params_brand);
 
         if (params_brand) {
             breadcrumbs_text.innerHTML = `<span class="breadcrumbs__home"><a href="/kategoriliste" class="breadcrumbs__home_active">Home</a></span> / ${params_brand}</a></span>`;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
             shop_varer.innerHTML = `
             <div class="shop__kategorier_box">
-                <img class="shop__kategorier_varebillede" src="${products.image}" alt="varebillede">
+                <img class="shop__kategorier_varebillede" src="${products.images}" alt="varebillede">
             </div>
                 <p class="product__text">${products.make}/${products.model}</p>
                 <div class="price-boxes">

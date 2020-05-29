@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function (){
       
     .then(response => response.json())
     .then(data => {
-console.log (data)
+
         let shop_box = document.querySelector(".shop__kategorier_nest");
         let breadcrumbs_text = document.querySelector(".breadcrumbs");
         let currentPageTitle = document.querySelector(".currentpage-titel")
