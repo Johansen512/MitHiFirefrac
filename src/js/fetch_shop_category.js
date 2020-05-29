@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function (){
     let current_URL = window.location.search;
     let search_params = new URLSearchParams(current_URL);
     let params_category = search_params.get("category");
-    console.log(params_category);
+    /*console.log(params_category);*/
  
     /*fetch(`https://hifi-corner.herokuapp.com/api/v1/products/${params_category}`*/
     fetch("https://hifi-corner.herokuapp.com/api/v1/products?category=", {
