@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h2 class="heading__product-name">${data.make}/${data.model}</h2>
                 <h4 class="link link__brand-link">See other ${data.make} products</h4>
                 <div class="price-box">
-                <h3 class="heading__product-price">${data.price}</h3>
+                <h3 class="heading__product-price"> £ ${data.price}</h3>
                               
                 </div>
                 <p class="text__product-description">${data.description}</p>

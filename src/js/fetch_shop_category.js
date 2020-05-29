@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function (){
                 <p class="product__text">${products.make}/${products.model}</p>
             <div class="price-boxes">
                
-                <p class="product__price">${products.price}</p>
+                <p class="product__price"> £ ${products.price}</p>
             
                </div>
                 <a class="putinbasket button_brown-button" href="/product?sku=${products.sku}">ADD TO CART</a>
