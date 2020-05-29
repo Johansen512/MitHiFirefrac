@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log (params_category)
 
             let manuAsideLeft = document.querySelector('.shopkategorier__aside_left-2');
-            
+            let manuAside = document.querySelector('.manufacturer__aside_right');
             
 
             data.forEach(products => {
@@ -37,6 +37,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
 
                 manuAsideLeft.appendChild(sectionLeft);
+
+
+                //Now This
+
+                let section = document.createElement('ul');
+            section.setAttribute('data-brand', products.make);
+            
+            section.innerHTML = `  
+            <li class="manufacturer__links"><a class="manufacturer__links_url" href="/shop_kategorier?make=${products.make}">${products.make}</a></li> 
+            `;
+            
+            manuAside.appendChild(section);
+
+            //This ends here
+
+
+
+
+
+
+
+
+
+
             })
 //HER FRA
 current_data = data.filter(products => products.make == params_category);

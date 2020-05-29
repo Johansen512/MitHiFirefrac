@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function (){
 
-    let manufacturersR = [];
+    let manufacturers = [];
     let current_URL = window.location.search;
     let search_params = new URLSearchParams(current_URL);
-    let params_categoryR = search_params.get("make");
-    let current_dataR;
+    let params_category = search_params.get("make");
+    let current_data;
     /*fetch("/assets/data/product_data_dummy.json")*/
 
     fetch("https://hifi-corner.herokuapp.com/api/v1/products?make=", {
@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", function (){
 
     .then(response => response.json())
     .then(data => {
-        console.log (params_categoryR)
+        console.log (params_category)
         let manuAside = document.querySelector('.manufacturer__aside_right');
         
         data.forEach(products => {
-            if (manufacturersR.indexOf(products.make) != -1) { return; }
+            if (manufacturers.indexOf(products.make) != -1) { return; }
             
-            manufacturersR.push(products.make);
+            manufacturers.push(products.make);
 
             let section = document.createElement('ul');
             section.setAttribute('data-brand', products.make);
@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function (){
 
 
 //HER FRA
-current_dataR = data.filter(products => products.make == params_categoryR);
-current_dataR.forEach(products => {
+current_data = data.filter(products => products.make == params_category);
+current_data.forEach(products => {
 
                 let shop_box = document.querySelector(".shop__kategorier_nest");
                 let shop_varer = document.createElement("div");
