@@ -5,6 +5,8 @@
     width: 42em;
     margin: auto;
     margin-top: 2em;
+    
+    
 }
 
 .kategori__box{
@@ -14,6 +16,19 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    background-color: #A39161;
+    filter: opacity(90%) sepia(70%);
+    
+}
+
+.kategori__box:hover{
+    object-fit:cover;
+    width: 10.5em;
+    height: 10.5em;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    filter: opacity(100%);
 }
 
 .kategori__link{
