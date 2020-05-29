@@ -1,3 +1,4 @@
+/*THIS OUT!!1
 document.addEventListener("DOMContentLoaded", function (){
 
     let manufacturers = [];
@@ -6,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function (){
     let params_category = search_params.get("make");
     let current_data;
     /*fetch("/assets/data/product_data_dummy.json")*/
-
+/*
     fetch("https://hifi-corner.herokuapp.com/api/v1/products?make=", {
         "method": "GET"
       })
@@ -60,7 +61,7 @@ current_data.forEach(products => {
                 `;
     /*<p class="product__pricesale">${products.price}</p>   Hører til oppe ved price*/
     
-                shop_box.appendChild(shop_varer);
+               /* shop_box.appendChild(shop_varer);
 
                 //HER TIL
 
@@ -69,4 +70,4 @@ current_data.forEach(products => {
 
         })
             
-        })
+        })*/
