@@ -12,7 +12,7 @@ function data () {
     function buildDATA() {
         return gulp
                 .src('./src/data/**/*')
-                .pipe(gulp.dest("tmp/assets/data"))
+                .pipe(gulp.dest("dist/assets/data"))
                 
         
         }
